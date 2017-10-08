@@ -1,2 +1,2 @@
-gcc listaSeqEstatica.c -o listaSeqEstatica
-./listaSeqEstatica
+gcc listaLigadaD.c -o listaLigadaD
+./listaLigadaD

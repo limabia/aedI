@@ -137,7 +137,7 @@ bool inserirElemListaOrd(LISTA* l, REGISTRO reg) {
     ant->prox = i;
   }  
   return true;
-} /* inserirElemListaOrd */
+} /* inserirElemListaOrdOrd */
 
 /* retornarPrimeiro - retorna o endereco do primeiro elemento da lista e (caso
    a lista nao esteja vazia) retorna a chave desse elemento na memoria 
@@ -163,5 +163,35 @@ PONT retornarUltimo(LISTA* l, TIPOCHAVE *ch){
 int main(){
   LISTA lista;
   inicializarLista(&lista);
+
+  exibirLista(&lista);
+  printf("Numero de elementos na lista: %i.\n",tamanho(&lista));
+  printf("Tamanho da lista (em bytes): %i.\n",tamanhoEmBytes(&lista));
+  REGISTRO reg;
+  reg.chave = 9;
+  inserirElemListaOrd(&lista,reg);
+  exibirLista(&lista);
+  reg.chave=3;
+  inserirElemListaOrd(&lista,reg);
+  reg.chave=4;
+  inserirElemListaOrd(&lista,reg);
+  reg.chave=1;
+  inserirElemListaOrd(&lista,reg);
+  reg.chave=12;
+  inserirElemListaOrd(&lista,reg);
+  exibirLista(&lista);
+  printf("Numero de elementos na lista: %i.\n",tamanho(&lista));
+  printf("Tamanho da lista (em bytes): %i.\n",tamanhoEmBytes(&lista));
+  printf("Chave 4 encontrada na posicao: %p do arranjo A.\n",buscaSequencial(&lista,4));
+  if (excluirElemLista(&lista,4)) printf("Exclusao bem sucedida: 4.\n");
+  if (excluirElemLista(&lista,8)) printf("Exclusao bem sucedida: 8.\n");
+  if (excluirElemLista(&lista,9)) printf("Exclusao bem sucedida: 9.\n");
+  exibirLista(&lista);
+  printf("Numero de elementos na lista: %i.\n",tamanho(&lista));
+  printf("Tamanho da lista (em bytes): %i.\n",tamanhoEmBytes(&lista));
+  reinicializarLista(&lista);
+  exibirLista(&lista);
+  printf("Numero de elementos na lista: %i.\n",tamanho(&lista));
+  printf("Tamanho da lista (em bytes): %i.\n",tamanhoEmBytes(&lista));
   return 0;
 }
