@@ -44,10 +44,10 @@ int main(){
 
                    
 
-(*primeiro).prox->valor: 10
+/*(*primeiro).prox->valor: 10
 primeiro->prox->valor: 10
 primeiro->prox->prox->valor: 12
 primeiro->valor: 15
 primeiro: 1874243664
 primeiro->prox->ant: 1874243664
-primeiro->prox->prox: 1874243632
+primeiro->prox->prox: 1874243632*/
