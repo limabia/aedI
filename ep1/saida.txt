@@ -1,0 +1,221 @@
+Log fila [elementos: 0]
+
+Log preferencial [elementos: 0]
+
+
+ok
+Log fila [elementos: 1]
+(nil)[20;21;0x13c2040](nil) 
+Log preferencial [elementos: 1]
+(nil)[20;21;0x13c2040](nil) 
+
+ok
+Log fila [elementos: 2]
+(nil)[20;21;0x13c2040]0x13c2070 0x13c2040[30;23;0x13c2070](nil) 
+Log preferencial [elementos: 2]
+(nil)[30;23;0x13c2070]0x13c2040 0x13c2070[20;21;0x13c2040](nil) 
+
+ok
+Log fila [elementos: 3]
+(nil)[20;21;0x13c2040]0x13c2070 0x13c2040[30;23;0x13c2070]0x13c20a0 0x13c2070[22;22;0x13c20a0](nil) 
+Log preferencial [elementos: 3]
+(nil)[30;23;0x13c2070]0x13c20a0 0x13c2070[22;22;0x13c20a0]0x13c2040 0x13c20a0[20;21;0x13c2040](nil) 
+
+ok
+Log fila [elementos: 4]
+(nil)[20;21;0x13c2040]0x13c2070 0x13c2040[30;23;0x13c2070]0x13c20a0 0x13c2070[22;22;0x13c20a0]0x13c20d0 0x13c20a0[5;20;0x13c20d0](nil) 
+Log preferencial [elementos: 4]
+(nil)[30;23;0x13c2070]0x13c20a0 0x13c2070[22;22;0x13c20a0]0x13c2040 0x13c20a0[20;21;0x13c2040]0x13c20d0 0x13c2040[5;20;0x13c20d0](nil) 
+
+ok
+Log fila [elementos: 5]
+(nil)[20;21;0x13c2040]0x13c2070 0x13c2040[30;23;0x13c2070]0x13c20a0 0x13c2070[22;22;0x13c20a0]0x13c20d0 0x13c20a0[5;20;0x13c20d0]0x13c2100 0x13c20d0[50;25;0x13c2100](nil) 
+Log preferencial [elementos: 5]
+(nil)[50;25;0x13c2100]0x13c2070 0x13c2100[30;23;0x13c2070]0x13c20a0 0x13c2070[22;22;0x13c20a0]0x13c2040 0x13c20a0[20;21;0x13c2040]0x13c20d0 0x13c2040[5;20;0x13c20d0](nil) 
+
+ok (6) - registro repetido
+Log fila [elementos: 5]
+(nil)[20;21;0x13c2040]0x13c2070 0x13c2040[30;23;0x13c2070]0x13c20a0 0x13c2070[22;22;0x13c20a0]0x13c20d0 0x13c20a0[5;20;0x13c20d0]0x13c2100 0x13c20d0[50;25;0x13c2100](nil) 
+Log preferencial [elementos: 5]
+(nil)[50;25;0x13c2100]0x13c2070 0x13c2100[30;23;0x13c2070]0x13c20a0 0x13c2070[22;22;0x13c20a0]0x13c2040 0x13c20a0[20;21;0x13c2040]0x13c20d0 0x13c2040[5;20;0x13c20d0](nil) 
+
+ok (7) - registro repetido
+Log fila [elementos: 5]
+(nil)[20;21;0x13c2040]0x13c2070 0x13c2040[30;23;0x13c2070]0x13c20a0 0x13c2070[22;22;0x13c20a0]0x13c20d0 0x13c20a0[5;20;0x13c20d0]0x13c2100 0x13c20d0[50;25;0x13c2100](nil) 
+Log preferencial [elementos: 5]
+(nil)[50;25;0x13c2100]0x13c2070 0x13c2100[30;23;0x13c2070]0x13c20a0 0x13c2070[22;22;0x13c20a0]0x13c2040 0x13c20a0[20;21;0x13c2040]0x13c20d0 0x13c2040[5;20;0x13c20d0](nil) 
+
+ok (8) - registro repetido
+Log fila [elementos: 5]
+(nil)[20;21;0x13c2040]0x13c2070 0x13c2040[30;23;0x13c2070]0x13c20a0 0x13c2070[22;22;0x13c20a0]0x13c20d0 0x13c20a0[5;20;0x13c20d0]0x13c2100 0x13c20d0[50;25;0x13c2100](nil) 
+Log preferencial [elementos: 5]
+(nil)[50;25;0x13c2100]0x13c2070 0x13c2100[30;23;0x13c2070]0x13c20a0 0x13c2070[22;22;0x13c20a0]0x13c2040 0x13c20a0[20;21;0x13c2040]0x13c20d0 0x13c2040[5;20;0x13c20d0](nil) 
+
+################# REMOVENDO #######################
+Primeiro: 20, 21
+Log fila [elementos: 4]
+(nil)[30;23;0x13c2070]0x13c20a0 0x13c2070[22;22;0x13c20a0]0x13c20d0 0x13c20a0[5;20;0x13c20d0]0x13c2100 0x13c20d0[50;25;0x13c2100](nil) 
+Log preferencial [elementos: 4]
+(nil)[50;25;0x13c2100]0x13c2070 0x13c2100[30;23;0x13c2070]0x13c20a0 0x13c2070[22;22;0x13c20a0]0x13c20d0 0x13c20a0[5;20;0x13c20d0](nil) 
+
+Primeiro: 30, 23
+Log fila [elementos: 3]
+(nil)[22;22;0x13c20a0]0x13c20d0 0x13c20a0[5;20;0x13c20d0]0x13c2100 0x13c20d0[50;25;0x13c2100](nil) 
+Log preferencial [elementos: 3]
+(nil)[50;25;0x13c2100]0x13c20a0 0x13c2100[22;22;0x13c20a0]0x13c20d0 0x13c20a0[5;20;0x13c20d0](nil) 
+
+Primeiro: 22, 22
+Log fila [elementos: 2]
+(nil)[5;20;0x13c20d0]0x13c2100 0x13c20d0[50;25;0x13c2100](nil) 
+Log preferencial [elementos: 2]
+(nil)[50;25;0x13c2100]0x13c20d0 0x13c2100[5;20;0x13c20d0](nil) 
+
+Primeiro: 5, 20
+Log fila [elementos: 1]
+(nil)[50;25;0x13c2100](nil) 
+Log preferencial [elementos: 1]
+(nil)[50;25;0x13c2100](nil) 
+
+Primeiro: 50, 25
+Log fila [elementos: 0]
+
+Log preferencial [elementos: 0]
+
+
+Fila vazia (6)
+Log fila [elementos: 0]
+
+Log preferencial [elementos: 0]
+
+
+################# INSERINDO NOVAMENTE #############
+ok
+Log fila [elementos: 1]
+(nil)[6;1;0x13c2130](nil) 
+Log preferencial [elementos: 1]
+(nil)[6;1;0x13c2130](nil) 
+
+ok
+Log fila [elementos: 2]
+(nil)[6;1;0x13c2130]0x13c2160 0x13c2130[8;3;0x13c2160](nil) 
+Log preferencial [elementos: 2]
+(nil)[8;3;0x13c2160]0x13c2130 0x13c2160[6;1;0x13c2130](nil) 
+
+ok
+Log fila [elementos: 3]
+(nil)[6;1;0x13c2130]0x13c2160 0x13c2130[8;3;0x13c2160]0x13c2190 0x13c2160[7;2;0x13c2190](nil) 
+Log preferencial [elementos: 3]
+(nil)[8;3;0x13c2160]0x13c2190 0x13c2160[7;2;0x13c2190]0x13c2130 0x13c2190[6;1;0x13c2130](nil) 
+
+ok
+Log fila [elementos: 4]
+(nil)[6;1;0x13c2130]0x13c2160 0x13c2130[8;3;0x13c2160]0x13c2190 0x13c2160[7;2;0x13c2190]0x13c21c0 0x13c2190[5;1;0x13c21c0](nil) 
+Log preferencial [elementos: 4]
+(nil)[8;3;0x13c2160]0x13c2190 0x13c2160[7;2;0x13c2190]0x13c2130 0x13c2190[6;1;0x13c2130]0x13c21c0 0x13c2130[5;1;0x13c21c0](nil) 
+
+ok
+Log fila [elementos: 5]
+(nil)[6;1;0x13c2130]0x13c2160 0x13c2130[8;3;0x13c2160]0x13c2190 0x13c2160[7;2;0x13c2190]0x13c21c0 0x13c2190[5;1;0x13c21c0]0x13c21f0 0x13c21c0[10;5;0x13c21f0](nil) 
+Log preferencial [elementos: 5]
+(nil)[10;5;0x13c21f0]0x13c2160 0x13c21f0[8;3;0x13c2160]0x13c2190 0x13c2160[7;2;0x13c2190]0x13c2130 0x13c2190[6;1;0x13c2130]0x13c21c0 0x13c2130[5;1;0x13c21c0](nil) 
+
+nok (14)
+Log fila [elementos: 5]
+(nil)[6;1;0x13c2130]0x13c2160 0x13c2130[8;3;0x13c2160]0x13c2190 0x13c2160[7;2;0x13c2190]0x13c21c0 0x13c2190[5;1;0x13c21c0]0x13c21f0 0x13c21c0[10;5;0x13c21f0](nil) 
+Log preferencial [elementos: 5]
+(nil)[10;5;0x13c21f0]0x13c2160 0x13c21f0[8;3;0x13c2160]0x13c2190 0x13c2160[7;2;0x13c2190]0x13c2130 0x13c2190[6;1;0x13c2130]0x13c21c0 0x13c2130[5;1;0x13c21c0](nil) 
+
+################# REMOVENDO NOVAMENTE #############
+Prioritario: 10, 5
+Log fila [elementos: 4]
+(nil)[6;1;0x13c2130]0x13c2160 0x13c2130[8;3;0x13c2160]0x13c2190 0x13c2160[7;2;0x13c2190]0x13c21c0 0x13c2190[5;1;0x13c21c0](nil) 
+Log preferencial [elementos: 4]
+(nil)[8;3;0x13c2160]0x13c2190 0x13c2160[7;2;0x13c2190]0x13c2130 0x13c2190[6;1;0x13c2130]0x13c21c0 0x13c2130[5;1;0x13c21c0](nil) 
+
+Prioritario: 8, 3
+Log fila [elementos: 3]
+(nil)[6;1;0x13c2130]0x13c2190 0x13c2130[7;2;0x13c2190]0x13c21c0 0x13c2190[5;1;0x13c21c0](nil) 
+Log preferencial [elementos: 3]
+(nil)[7;2;0x13c2190]0x13c2130 0x13c2190[6;1;0x13c2130]0x13c21c0 0x13c2130[5;1;0x13c21c0](nil) 
+
+Prioritario: 7, 2
+Log fila [elementos: 2]
+(nil)[6;1;0x13c2130]0x13c21c0 0x13c2130[5;1;0x13c21c0](nil) 
+Log preferencial [elementos: 2]
+(nil)[6;1;0x13c2130]0x13c21c0 0x13c2130[5;1;0x13c21c0](nil) 
+
+Prioritario: 6, 1
+Log fila [elementos: 1]
+(nil)[5;1;0x13c21c0](nil) 
+Log preferencial [elementos: 1]
+(nil)[5;1;0x13c21c0](nil) 
+
+Prioritario: 5, 1
+Log fila [elementos: 0]
+
+Log preferencial [elementos: 0]
+
+
+Fila vazia (12)
+Log fila [elementos: 0]
+
+Log preferencial [elementos: 0]
+
+
+Fila vazia (13)
+Log fila [elementos: 0]
+
+Log preferencial [elementos: 0]
+
+
+################# OUTROS TESTES ###################
+ok
+Log fila [elementos: 1]
+(nil)[50;20;0x13c2220](nil) 
+Log preferencial [elementos: 1]
+(nil)[50;20;0x13c2220](nil) 
+
+ok
+Log fila [elementos: 2]
+(nil)[50;20;0x13c2220]0x13c2250 0x13c2220[60;60;0x13c2250](nil) 
+Log preferencial [elementos: 2]
+(nil)[60;60;0x13c2250]0x13c2220 0x13c2250[50;20;0x13c2220](nil) 
+
+ok
+Log fila [elementos: 3]
+(nil)[50;20;0x13c2220]0x13c2250 0x13c2220[60;60;0x13c2250]0x13c2280 0x13c2250[70;15;0x13c2280](nil) 
+Log preferencial [elementos: 3]
+(nil)[60;60;0x13c2250]0x13c2220 0x13c2250[50;20;0x13c2220]0x13c2280 0x13c2220[70;15;0x13c2280](nil) 
+
+ok
+Log fila [elementos: 4]
+(nil)[50;20;0x13c2220]0x13c2250 0x13c2220[60;60;0x13c2250]0x13c2280 0x13c2250[70;15;0x13c2280]0x13c22b0 0x13c2280[80;70;0x13c22b0](nil) 
+Log preferencial [elementos: 4]
+(nil)[80;70;0x13c22b0]0x13c2250 0x13c22b0[60;60;0x13c2250]0x13c2220 0x13c2250[50;20;0x13c2220]0x13c2280 0x13c2220[70;15;0x13c2280](nil) 
+
+Elemento encontrado: 50, 20
+ok Elemento com identificador: 40 nao encontrado
+Elemento encontrado: 80, 70
+Primeiro: 50, 20
+Log fila [elementos: 3]
+(nil)[60;60;0x13c2250]0x13c2280 0x13c2250[70;15;0x13c2280]0x13c22b0 0x13c2280[80;70;0x13c22b0](nil) 
+Log preferencial [elementos: 3]
+(nil)[80;70;0x13c22b0]0x13c2250 0x13c22b0[60;60;0x13c2250]0x13c2280 0x13c2250[70;15;0x13c2280](nil) 
+
+Prioritario: 80, 70
+Log fila [elementos: 2]
+(nil)[60;60;0x13c2250]0x13c2280 0x13c2250[70;15;0x13c2280](nil) 
+Log preferencial [elementos: 2]
+(nil)[60;60;0x13c2250]0x13c2280 0x13c2250[70;15;0x13c2280](nil) 
+
+Primeiro: 60, 60
+Log fila [elementos: 1]
+(nil)[70;15;0x13c2280](nil) 
+Log preferencial [elementos: 1]
+(nil)[70;15;0x13c2280](nil) 
+
+Prioritario: 70, 15
+Log fila [elementos: 0]
+
+Log preferencial [elementos: 0]
+
