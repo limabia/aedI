@@ -1,5 +1,6 @@
 #include "filaPreferencial.h"
 
+
 PFILA criarFila(){
   PFILA res = (PFILA) malloc(sizeof(FILAPREFERENCIAL));
   PONT cab =  (PONT) malloc(sizeof(REGISTRO));
@@ -13,17 +14,18 @@ PFILA criarFila(){
   return res;
 }
 
+
 bool exibirLog(PFILA f){
   int numElementos = tamanho(f);
   printf("Log fila [elementos: %i]\n", numElementos);
-  PONT atual = f->cabeca->proxFila->proxFila;
-  while (atual != f->cabeca->proxFila){
+  PONT atual = f->cabeca->proxFila;
+  while (atual != f->cabeca){
     printf("%p[%i;%i;%p]%p ", atual->antFila, atual->id, atual->idade, atual, atual->proxFila);
     atual = atual->proxFila;
   }
   printf("\nLog preferencial [elementos: %i]\n", numElementos);
-  atual = f->cabeca->proxFila->proxIdade;
-  while (atual != f->cabeca->proxFila){
+  atual = f->cabeca->proxIdade;
+  while (atual != f->cabeca){
     printf("%p[%i;%i;%p]%p ", atual->antIdade, atual->id, atual->idade, atual, atual->proxIdade);
     atual = atual->proxIdade;
   }
@@ -55,15 +57,15 @@ int tamanho(PFILA f){
 }
 
 
-bool buscaId(PFILA f, int id){
+PONT buscaId(PFILA f, int id){
   PONT pos = f->cabeca->proxFila;
   while (pos != f->cabeca){
     if (pos->id == id){
-      return true;
+      return pos;
     }
     pos = pos->proxFila;
   }
-  return false;
+  return NULL;
 }
 
 
@@ -79,20 +81,20 @@ void insereFilaNormal(PFILA f, int id, int idade, PONT novo){
 
 
 void insereFilaPref(PFILA f, int idade, PONT novo) {
-    PONT pos = f->cabeca->proxIdade;
-    while (pos != f->cabeca && pos->idade >= idade) {
-        pos = pos->proxIdade;
-    }
-    novo->proxIdade = pos;
-    novo->antIdade = pos->antIdade;
-    pos->antIdade->proxIdade = novo;
-    pos->antIdade = novo;
+  PONT pos = f->cabeca->proxIdade;
+  while (pos != f->cabeca && pos->idade >= idade) {
+      pos = pos->proxIdade;
+  }
+  novo->proxIdade = pos;
+  novo->antIdade = pos->antIdade;
+  pos->antIdade->proxIdade = novo;
+  pos->antIdade = novo;
 }
 
 
 bool inserirElemento(PFILA f, int id, int idade){
-  bool achouElemId = buscaId(f, id); 
-  if (achouElemId == false){
+  PONT achouElemId = buscaId(f, id); 
+  if (achouElemId == NULL){
     PONT novo = (PONT) malloc(sizeof(REGISTRO));
     insereFilaNormal(f, id, idade, novo);
     insereFilaPref(f, idade, novo);
@@ -104,28 +106,16 @@ bool inserirElemento(PFILA f, int id, int idade){
 
 PONT removerElementoIdade(PFILA f){
   PONT elementoRemovido = f->cabeca->proxIdade;
-  if (elementoRemovido){
-    // ajustando ponteiros da fila preferencial
-    f->cabeca->proxIdade = elementoRemovido->proxIdade;
-    if (f->cabeca->proxIdade){
-      f->cabeca->proxIdade->antIdade = NULL;  
-    }
-    elementoRemovido->proxIdade = NULL;
-
-    // se nao for o primeiro da fila comum
-    if (elementoRemovido->antFila != NULL){
-      elementoRemovido->antFila->proxFila = elementoRemovido->proxFila;
-    } else {
-      f->cabeca->proxFila = elementoRemovido->proxFila;
-    }
-    // se nao for o ultimo da fila comum
-    if (elementoRemovido->proxFila != NULL){
-      elementoRemovido->proxFila->antFila = elementoRemovido->antFila;
-    } else {
-      f->cabeca->antFila = elementoRemovido->antFila;
-    }
+  
+  if (elementoRemovido != f->cabeca){
+    elementoRemovido->antIdade->proxIdade = elementoRemovido->proxIdade;
+    elementoRemovido->proxIdade->antIdade = elementoRemovido->antIdade;
+    elementoRemovido->antFila->proxFila = elementoRemovido->proxFila;
+    elementoRemovido->proxFila->antFila = elementoRemovido->antFila;
     elementoRemovido->proxFila = NULL;
     elementoRemovido->antFila = NULL;
+    elementoRemovido->proxIdade = NULL;
+    elementoRemovido->antIdade = NULL;
     return elementoRemovido;
   }
   return NULL;
@@ -134,28 +124,14 @@ PONT removerElementoIdade(PFILA f){
 
 PONT removerElementoFila(PFILA f){
   PONT elementoRemovido = f->cabeca->proxFila;
-  if (elementoRemovido){
-    // ajustando ponteiros da fila normal
-    f->cabeca->proxFila = elementoRemovido->proxFila;
-    if (f->cabeca->proxFila){
-      f->cabeca->proxFila->antFila = NULL;
-    } else {
-      f->cabeca->antFila = NULL;
-    }
+  
+  if (elementoRemovido != f->cabeca){
+    elementoRemovido->antFila->proxFila = elementoRemovido->proxFila;
+    elementoRemovido-> proxFila->antFila = elementoRemovido->antFila;
+    elementoRemovido->antIdade->proxIdade = elementoRemovido->proxIdade;
+    elementoRemovido->proxIdade->antIdade = elementoRemovido->antIdade;
     elementoRemovido->proxFila = NULL;
     elementoRemovido->antFila = NULL;
-
-    // ajustando da fila pref
-    if (elementoRemovido->antIdade != NULL){
-      elementoRemovido->antIdade->proxIdade = elementoRemovido->proxIdade;
-    } else {
-      f->cabeca->proxIdade = elementoRemovido->proxIdade;
-    }
-
-    if (elementoRemovido->proxIdade != NULL){
-      elementoRemovido->proxIdade->antIdade = elementoRemovido->antIdade;
-    }
-
     elementoRemovido->proxIdade = NULL;
     elementoRemovido->antIdade = NULL;
     return elementoRemovido;
@@ -165,9 +141,16 @@ PONT removerElementoFila(PFILA f){
 
 
 bool abandonarFila(PFILA f, int id){
-  bool elemExiste = buscaId(f, id);
-  if(elemExiste){
-    /* tirar da fila e da fila pref */
+  PONT elementoDesistente = buscaId(f, id);
+  if(elementoDesistente != NULL){
+    if (elementoDesistente != f->cabeca){
+      elementoDesistente->antFila->proxFila = elementoDesistente->proxFila;
+      elementoDesistente-> proxFila->antFila = elementoDesistente->antFila;
+      elementoDesistente->antIdade->proxIdade = elementoDesistente->proxIdade;
+      elementoDesistente->proxIdade->antIdade = elementoDesistente->antIdade;
+      free(elementoDesistente);
+    }
+    return true;
   }
   return false;
 }

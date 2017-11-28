@@ -31,7 +31,6 @@ int main() {
   else printf("ok (8) - registro repetido\n");
   exibirLog(f);
   printf("################# REMOVENDO #######################\n");
-
   prioritario = removerElementoFila(f);
   if (prioritario) printf("Primeiro: %i, %i\n", prioritario->id, prioritario->idade);
   else printf("Fila vazia (1)\n");
@@ -135,7 +134,6 @@ int main() {
   id = 80;
   if (consultarIdade(f,id,&idade)) printf("Elemento encontrado: %i, %i\n", id, idade);
   else printf("Elemento com identificador: %i nao encontrado\n", id);
-
   printf("\n");
   if (abandonarFila(f,88)) printf("nok - Excluiu elemento inexistente: id=88\n");
   else printf("ok - Elemento nao existente id=88\n");
@@ -152,7 +150,6 @@ int main() {
   if (abandonarFila(f,70)) printf("ok - Excluiu elemento: id=70\n");
   else printf("nok - Elemento nao existente id=70\n");
   exibirLog(f);
-
 
   return 0;
 }
